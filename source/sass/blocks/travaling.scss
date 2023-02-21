@@ -1,0 +1,72 @@
+.travaling {
+  & h2 {
+    text-align: start;
+
+    @media (max-width: $vp-768) {
+      font-size: 24px;
+      max-width: 280px;
+    }
+  }
+
+  & p {
+    margin: 0;
+    margin-top: 27px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (max-width: $vp-1024) {
+      margin-top: 15px;
+    }
+  }
+
+  & img {
+    object-fit: cover;
+    margin-top: 5px;
+    width: 100%;
+
+    @media (max-width: $vp-1024) {
+      margin-top: 15px;
+    }
+
+    @media (max-width: $vp-768) {
+      margin: 0;
+    }
+  }
+}
+
+.travaling__wrapper {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 110px 103px;
+  padding-bottom: 141px;
+  display: grid;
+  grid-template-columns: auto minmax(400px, auto);
+  gap: 88px;
+
+  @media (max-width: $vp-1024) {
+    padding: 90px 45px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  @media (max-width: $vp-768) {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 42px;
+    padding: 55px 15px;
+    padding-bottom: 85px;
+  }
+}
+
+.travaling__wrapper-text {
+  max-width: 512px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: $vp-768) {
+    max-width: 100%;
+  }
+}

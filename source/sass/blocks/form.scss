@@ -1,0 +1,183 @@
+.form {
+  background: #011c40;
+  box-shadow: 0 4px 45px #011c4026;
+  width: 403px;
+  margin: 0 auto;
+  color: #f9fbfd;
+  padding: 40px 50px 50px;
+  align-self: start;
+
+  @media (max-width: $vp-1024) {
+    padding: 47px 50px 50px;
+  }
+
+  @media (max-width: $vp-768) {
+    width: auto;
+    padding: 35px 30px 40px;
+    margin: 0 auto;
+  }
+}
+
+form .form__text {
+  @include fonts(500, 18px, 26px);
+
+  @media (max-width: $vp-768) {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
+
+.form__list {
+  list-style: none;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: $vp-1024) {
+    margin-top: 27px;
+  }
+
+  @media (max-width: $vp-768) {
+    gap: 20px;
+  }
+}
+
+.form__item input {
+  @include fonts(400, 14px, 21px);
+  width: 100%;
+  padding: 11px 16px;
+  border: none;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:hover {
+    background: #ffffffb3;
+  }
+}
+
+form > label {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+  margin-top: 18px;
+  padding-left: 23px;
+  position: relative;
+  cursor: pointer;
+
+  & input:checked + .form__check-mark::before {
+    content: "";
+    background-image: url("../img/svg/check-mark.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 6px;
+    background-position: center;
+    width: 10px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & input:focus + .form__check-mark {
+    outline: solid 2px #fd9926;
+    border-radius: 3px;
+  }
+
+  &:hover .form__checkbox-text {
+    opacity: 0.8;
+  }
+
+  &:hover .form__check-mark {
+    opacity: 0.8;
+  }
+
+  &:hover input:checked + .form__check-mark::before {
+    content: "";
+    position: absolute;
+    top: 38%;
+    left: 23%;
+    transform: scale(1.2);
+  }
+
+  @media (max-width: $vp-1024) {
+    margin-top: 18px;
+  }
+
+  @media (max-width: $vp-768) {
+    margin-top: 16px;
+    padding-left: 30px;
+  }
+}
+
+.form__check-mark {
+  background: #f9fbfd;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  cursor: pointer;
+
+  @media (max-width: $vp-768) {
+    width: 20px;
+    height: 20px;
+    top: 4px;
+  }
+}
+
+.form__checkbox-text {
+  @include fonts(400, 9px, 13px);
+
+}
+
+form button {
+  @include fonts(600, 14px, 21px);
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 27px;
+  background: #f9fbfd;
+  border: none;
+  width: 100%;
+  color: #011c40;
+  cursor: pointer;
+
+  &:hover {
+    background: #deebf8;
+  }
+
+  &:active {
+    background: #acd0f3;
+  }
+
+  @media (max-width: $vp-768) {
+    margin-top: 27px;
+  }
+}
+
+.form__item label {
+  position: relative;
+}
+
+.form__error {
+  color: #eb5a5a;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+.form__error-checkbox {
+  color: #eb5a5a;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+.form__message {
+  color: #f9fbfd;
+}
