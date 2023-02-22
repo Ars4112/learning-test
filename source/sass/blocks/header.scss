@@ -1,0 +1,48 @@
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  @media (max-width: $vp-768) {
+    position: static;
+  }
+}
+
+.header__nav {
+  padding: 36px 103px;
+  max-width: 1366px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 60px;
+
+  @media (max-width: $vp-1024) {
+    gap: 40px;
+    padding: 30px 45px;
+  }
+
+  @media (max-width: $vp-768) {
+    padding: 20px 15px;
+  }
+}
+
+.header--position {
+  @media (max-width: $vp-768) {
+    position: relative;
+  }
+}
+
+.button__close {
+  @media (max-width: $vp-768) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 43, 102, 0.5);
+    border: none;
+    z-index: 1;
+  }
+}

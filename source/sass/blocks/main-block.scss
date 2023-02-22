@@ -1,0 +1,112 @@
+.main-block {
+  background-color: #5e92c5;
+  background-image: url("../img/main-block-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  width: 100%;
+  min-height: 656px;
+  padding: 200px 0;
+  display: flex;
+  align-items: center;
+
+  @media (min-resolution: 1dppx) {
+    background-image: url("../img/main-block-desktop.webp");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-block-desktop@2x.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-block-desktop@2x.webp");
+  }
+
+  @media (max-width: $vp-1024) {
+    background-image: url("../img/main-block-tablet.jpg");
+    background-position: center;
+    min-height: 636px;
+
+    @media (min-resolution: 1dppx) {
+      background-image: url("../img/main-block-tablet.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-block-tablet@2x.jpg");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-block-tablet@2x.webp");
+    }
+  }
+
+  @media (max-width: $vp-768) {
+    background-image: url("../img/main-block-mobile.jpg");
+    background-position: bottom;
+    min-height: 500px;
+    padding: 177px 0;
+
+    @media (min-resolution: 1dppx) {
+      background-image: url("../img/main-block-mobile.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-block-mobile@2x.jpg");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-block-mobile@2x.webp");
+    }
+  }
+}
+
+.main-block__container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 198px;
+  position: relative;
+  top: -12px;
+
+  @media (max-width: $vp-1024) {
+    padding: 0 45px;
+    top: -4px;
+  }
+
+  @media (max-width: $vp-768) {
+    padding: 0 15px;
+    top: 0;
+  }
+}
+
+.main-block__title {
+  @include fonts(700, 54px, 66px);
+  margin: 0;
+  color: #f9fbfd;
+  text-shadow: 0 4px 4px #00000040;
+
+  @media (max-width: $vp-1024) {
+    @include fonts(700, 50px, 61px);
+  }
+
+  @media (max-width: $vp-768) {
+    @include fonts(700, 36px, 45px);
+  }
+}
+
+.main-block__text {
+  @include fonts(400, 20px, 24px);
+  margin: 0;
+  margin-top: 14px;
+  color: #f9fbfd;
+  text-shadow: 0 4px 4px #00000040;
+
+  @media (max-width: $vp-1024) {
+    @include fonts(400, 18px, 22px);
+  }
+
+  @media (max-width: $vp-768) {
+    @include fonts(400, 16px, 22px);
+    margin-top: 10px;
+  }
+}
